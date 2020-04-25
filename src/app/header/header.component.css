@@ -1,0 +1,11 @@
+a{
+  text-decoration: none;
+  color: bisque;
+}
+li{
+  list-style: none;
+}
+.register{
+  position: relative !important;
+  left: 550px !important;
+}

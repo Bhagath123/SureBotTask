@@ -1,0 +1,58 @@
+<div class="col-md-4 offset-4 card mt-2">
+<div class="card-body">
+
+  <h1 class="text-center">Registration</h1>
+
+<form (ngSubmit)="onSubmit(f)" #f="ngForm">
+  <div class="form-group">
+<label for="name">Name</label>
+<input type="text" id="name" ngModel name="name" class="form-control"  required #name="ngModel">
+</div>
+<div *ngIf="name.invalid && (name.dirty || name.touched)"
+    class="alert alert-danger">
+  <div *ngIf="name.errors.required">
+    Name is required.
+  </div>
+</div>
+
+<div >
+  <div class="form-group" >
+    <label for="class">Image Url</label>
+    <input type="text" id="section" ngModel name="section" class="form-control" required #section="ngModel">
+    </div>
+    <div *ngIf="section.invalid && (section.dirty || section.touched)"
+      class="alert alert-danger">
+    <div *ngIf="section.errors.required">
+      section is required.
+    </div>
+  </div>
+  </div>
+  <div class="form-group">
+    <label for="email">Email</label>
+    <input type="email" id="email" ngModel name="email" class="form-control" required #email="ngModel">
+    </div>
+    <div *ngIf="email.invalid && (email.dirty || email.touched)"
+    class="alert alert-danger">
+  <div *ngIf="email.errors.required">
+    email is required.
+  </div>
+</div>
+    <div class="form-group">
+      <label for="password">Password</label>
+      <input type="password" id="password" ngModel name="password" class="form-control" required #pass="ngModel">
+      </div>
+      <div *ngIf="pass.invalid && (pass.dirty || pass.touched)"
+      class="alert alert-danger">
+    <div *ngIf="pass.errors.required">
+      password is required.
+    </div>
+  </div>
+      <div class="form-group">
+        <button type="submit" class="form-control btn-success" >Register </button>
+      </div>
+      <div class="redirectToLogin">
+        <span>Already have an account? <a class="redirect" routerLink="/login">Log In</a></span>
+      </div>
+</form>
+</div>
+</div>
